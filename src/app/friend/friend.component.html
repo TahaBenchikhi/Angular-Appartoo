@@ -1,0 +1,43 @@
+<div class="container container2s">
+    <div class="row">
+        <div class="">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-list"></span>Friends List
+
+                </div>
+                <div class="panel-body">
+                    <app-myfriend (notify)="beNotified($event)" [notification]="notification"></app-myfriend>
+                </div>
+                <div class="panel-footer">
+                    <div class="panel-heading">
+                        <span></span>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container container2s">
+    <div class="row">
+        <div class="">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-list"></span>Other Friends
+
+                </div>
+                <div class="panel-body">
+                    <app-newfriend (notify)="beNotified($event)" [notification]="notification"></app-newfriend>
+                </div>
+                <div class="panel-footer">
+                    <div class="panel-heading">
+                        <span></span>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

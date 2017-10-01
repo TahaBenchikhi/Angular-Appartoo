@@ -1,0 +1,27 @@
+<li class="list-group-item" *ngFor="let friend of friends">
+    <div class="checkbox">
+
+        <div>
+            Prenom : {{ friend.email }}
+        </div>
+        <div>
+            Nom : {{ friend.nom }}
+        </div>
+        <div>
+            Age : {{ friend.age }} ans
+        </div>
+        <div>
+            Race : {{ friend.race }}
+        </div>
+        <div>
+            Famille : {{ friend.famille }}
+        </div>
+        <div>
+            Nourriture : {{ friend.nourriture }}
+        </div>
+    </div>
+    <div class="pull-right action-buttons">
+        <a (click)='Onclick(friend.id)' class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+
+    </div>
+</li>

@@ -1,0 +1,36 @@
+
+  <div class="input-group">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">Search</button>
+    </span>
+    <input type="text" class="form-control" placeholder="Search for a friend" #value (keyup)='OnKeyup(value)'>
+  </div><!-- /input-group -->
+
+<li class="list-group-item" *ngIf = '!searchedfriend' >Friend Not Found :(</li>
+<li class="list-group-item" *ngIf = 'searchedfriend' ><!-- *ngFor="let friend of friends" -->
+  <div class="checkbox">
+
+    <div>
+      Prenom : {{ searchedfriend.email }}
+    </div>
+    <div>
+      Nom : {{ searchedfriend.nom }}
+    </div>
+    <div>
+      Age : {{ searchedfriend.age }} ans
+    </div>
+    <div>
+      Race : {{ searchedfriend.race }}
+    </div>
+    <div>
+      Famille : {{ searchedfriend.famille }}
+    </div>
+    <div>
+      Nourriture : {{ searchedfriend.nourriture }}
+    </div>
+  </div>
+  <div class="pull-right action-buttons">
+    <a (click)='Onclick(searchedfriend.id)' class="trash"><span class="glyphicon glyphicon-plus"></span></a>
+
+  </div>
+</li>

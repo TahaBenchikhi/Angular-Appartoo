@@ -1,0 +1,57 @@
+<div class="col-md-9 personal-info">
+    <div class="alert alert-info alert-dismissable">
+
+        <i class="fa fa-coffee"></i> Veuillez saisir vos nouvelles informations.
+    </div>
+    <h3>Mes coordonnées</h3>
+
+    <form class="form-horizontal" role="form" (ngSubmit)='onSubmit(formulaire)' #formulaire='ngForm'>
+        <div ngModelGroup="MyForm" #group='ngModelGroup'>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Nom:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" id="nom" type="text" name="nom"  [ngModel]="guard.GetUser()['nom'] " required #nom='ngModel'>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Prenom:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" id="prenom" type="text" name="prenom"  [ngModel]="guard.GetUser()['prenom'] " required #prenom='ngModel'>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Age:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" id="age" type="number" name="age"  [ngModel]="guard.GetUser()['age']" required #age='ngModel'>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Race:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" id="race" type="text" name="race"  [ngModel]="guard.GetUser()['race']" required #race='ngModel'>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Famille:</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="famille" type="text" name="famille"  [ngModel]="guard.GetUser()['famille']" required
+                        #famille='ngModel'>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">Nourriture:</label>
+                <div class="col-md-8">
+                    <input class="form-control " id="nourriture" type="text" name="nourriture" [ngModel]="guard.GetUser()['nourriture']" 
+                        required #nourriture='ngModel' >
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                    <input type="submit" class="btn btn-primary changer" value="Changer">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
